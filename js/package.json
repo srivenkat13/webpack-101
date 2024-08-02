@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "NODE_END='production' webpack",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "venkat",
   "license": "ISC",
   "description": "",
   "devDependencies": {

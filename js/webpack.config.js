@@ -23,6 +23,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
-  plugins:[new HtmlWebpackPlugin()],
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development'
+  plugins: [new HtmlWebpackPlugin()],
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  devtool: false,
 };
