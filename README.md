@@ -56,5 +56,10 @@ After this we add scripts in package.json to build and serve for development.
     "build": "NODE_END='production' webpack",
   },
 ```
+we can configure devServer like
+```
+devServer: {
+    port: 9090
+}
 
 

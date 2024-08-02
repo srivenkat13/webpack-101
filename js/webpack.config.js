@@ -23,7 +23,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({ title: "Development" })],
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   devtool: false,
+  devServer: {
+    port: 9090,
+  },
 };
