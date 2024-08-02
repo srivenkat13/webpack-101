@@ -31,3 +31,30 @@
     here in `use`, array of loaders is passed, which are executed from  right to left.
 
 6. To convert modern JS to support in older browsers we add `babel-loader`
+   ```
+    {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+    },
+    ```
+7. We specify output path where the bundled file should be present. usualy the `dist` folder
+   ```
+   const path = require('path)
+   output: {
+    path: path.resolve(__dirname,'dist'),
+    filename: 'bundle.js'
+  }
+  ```
+8. `html-webpack-plugin` is create html file in dist which will have link to `bundle.js` file.
+9. finally we set mode, if production it gets stricter.
+
+After this we add scripts in package.json to build and serve for development.
+```
+"scripts": {
+    "start": "webpack serve",
+    "build": "NODE_END='production' webpack",
+  },
+```
+
+
